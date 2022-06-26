@@ -1,0 +1,285 @@
+﻿@model List<Team>
+@{
+    ViewData["Title"] = "Nomad Force";
+}
+<header>
+        <div class="intro">
+            <h1 class="text-center">Nomad Force</h1>
+            <p class="text-center">create a great video for your <span>website</span></p>
+        </div>
+        <div class="menu">
+            <div class="container-fluid p-0">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container">
+                        <a class="navbar-brand text-warning" href="#">Nomad Force</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav bg-light ms-auto">
+                                <a class="nav-link" href="#">Home</a>
+                                <a class="nav-link" href="#our-studio">Our Studio</a>
+                                <a class="nav-link" href="#portfolio">Portfolio</a>
+                                <a class="nav-link" href="#news">New&Events</a>
+                                <a class="nav-link" href="#contact-us">Contact Us</a>
+                                <a class="nav-link" asp-area="Manage"  asp-controller="Dashboard" asp-action="Index">Admin Panel</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="our-studio">
+            <div class="container">
+                <div class="about-our">
+                    <h1>Let us create...</h1>
+                    <div class="row py-4">
+                        <div class="col-lg-6 col-md-12">
+                            <p>You may contribute a small amount via PayPal if Nomad Force Template is useful for you. This will absolutely help us to keep creating better CSS templates for you.<br><br>We provide you 100% free templates on TemplateMo website.
+                                Images are provided by FreePik and Unsplash websites.</p>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <p>This Bootstrap 5 layout is free to use for your business. You are allowed to edit it in any way you like. However, please do not redistribute this template ZIP file for a template download purpose on any other website such
+                                as Free CSS collections.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="my-5">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12">
+                            <div class="row">
+                                <div class="col-6 p-0">
+                                    <img class="w-100 h-100" src="~/assets/images/about.jpg" alt="">
+                                </div>
+                                <div class="col-6 p-0">
+                                    <div class="our-deltalis h-100">
+                                        <h1>We’re - idealists and strategic thinkers.</h1>
+                                        <p>Over six years in the video business</p>
+                                        <a href="#">Read News & Events</a>
+                                        <a href="#">Work with Us</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 p-0">
+                            <div id="carouselExampleIndicators" class="carousel slide h-100" data-bs-ride="carousel">
+                                <div class="carousel-inner h-100">
+                                    @foreach (var item in Model)
+                                   {
+                                        <div class="carousel-item position-relative h-100">
+                                        <img src="~/assets/images/@item.PhotoUrl" class="d-block w-100 h-100" alt="...">
+                                        <div class="our-worker">
+                                            <div class="col-lg-7 col-md-12">
+                                                <div class="about-worker">
+                                                    <p>@item.FullName</p>
+                                                    <span>@item.Role</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   }
+                                   
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio">
+            <div class="container">
+                <h1 class="section-title">Portfolio</h1>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img">
+                                <img src="~/assets/images/portfolio-1.jpg" alt="">
+                            </div>
+                            <div class="portfolio-text">
+                                <h2>Effortless</h2>
+                                <p class="text-danger">Branding</p>
+                            </div>
+                        </div>
+                        <div class="portfolio-card">
+                            <div class="portfolio-img">
+                                <img src="~/assets/images/portfolio-2.jpg" alt="">
+                            </div>
+                            <div class="portfolio-text">
+                                <h2>Health technology</h2>
+                                <p class="text-success">Art Direction</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img">
+                                <img src="~/assets/images/portfolio-3.jpg" alt="">
+                            </div>
+                            <div class="portfolio-text">
+                                <h2>Maki</h2>
+                                <p class="text-warning">Website</p>
+                            </div>
+                        </div>
+                        <div class="portfolio-card">
+                            <div class="portfolio-img">
+                                <img src="~/assets/images/portfolio-4.jpg" alt="">
+                            </div>
+                            <div class="portfolio-text">
+                                <h2>The gig economy</h2>
+                                <p class="text-info">Graphic</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="news">
+            <div class="container">
+                <h1 class="section-title">News & Events</h1>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="col-12">
+                            <img class="w-100" src="~/assets/images/news1.jpg" alt="">
+                        </div>
+                        <div class="col-12">
+                            <div class="news-text">
+                                <p>The rise of the gig economy spells the end for these workers the old system</p>
+                                <span>22 hours ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="column h-100">
+                            <div class="col-12 h-50">
+                                <div class="row">
+                                    <div class="col-lg-7 col-md-12">
+                                        <img class="w-100" src="~/assets/images/news3.jpg" alt="">
+                                    </div>
+                                    <div class="col-lg-5 col-md-12 p-0">
+                                        <div class="news-text">
+                                            <p>Job Opportunities: Digital, Marketing</p>
+                                            <span> Alaska, August 6, 2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 h-50">
+                                <div class="row">
+                                    <div class="col-lg-7 col-md-12">
+                                        <img class="w-100" src="~/assets/images/news2.jpg" alt="">
+                                    </div>
+                                    <div class="col-lg-5 col-md-12 p-0">
+                                        <div class="news-text">
+                                            <p>What happened to new viral video?</p>
+                                            <span>6 day ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact-us">
+            <div class="container">
+                <h1 class="section-title">Dont' be shy, write to us</h1>
+                <div class="col-lg-7 col-md-12 m-auto ">
+                    <form action="">
+                        <div class="row my-4">
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="Name">FullName</label>
+                                <input class="form-control" id="Name" placeholder="FullName">
+
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="Email">Email address</label>
+                                <input type="email" class="form-control" id="Email" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="Project">How can we help?</label>
+                            <textarea class="form-control" id="Project" placeholder="Tell us about the project" style="height: 200px"></textarea>
+                        </div>
+                        <div class="col-12 my-4">
+                            <label>Services</label>
+                            <div class="row">
+                                <div class="col-lg-4 col-sm-12">
+                                    <input type="checkbox" id="checkbox1">
+                                    <label for="checkbox1">Branding</label>
+                                </div>
+                                <div class="col-lg-4 col-sm-12">
+                                    <input type="checkbox" id="checkbox2">
+                                    <label for="checkbox2">Digital Experiences</label>
+                                </div>
+                                <div class="col-lg-4 col-sm-12">
+                                    <input type="checkbox" id="checkbox3">
+                                    <label for="checkbox3">Web Development</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center my-3">
+                            <button type="submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="map">
+                <iframe src="https://maps.google.com/maps?q=azerbaycan%20textniki%20universiteti&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i
+            ></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i
+            ></a>
+
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i
+            ></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i
+            ></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i
+            ></a>
+
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i
+            ></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>

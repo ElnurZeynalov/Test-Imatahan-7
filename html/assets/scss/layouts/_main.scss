@@ -1,0 +1,108 @@
+main {
+    #our-studio {
+        padding: 120px 0;
+        .about-our {
+            h1 {
+                font-weight: bold;
+                padding: 0 14px;
+            }
+            p {
+                font-size: 20px;
+                padding: 0 14px;
+                color: rgb(114, 114, 114);
+            }
+        }
+        .our-deltalis {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+            background-color: rgb(29, 31, 34);
+            padding: 20px;
+            p {
+                font-size: 22px;
+                font-weight: bold;
+                padding: 20px 0;
+            }
+            a {
+                text-decoration: none;
+                color: white;
+                font-weight: 500;
+                font-size: 16px;
+            }
+        }
+        .our-worker {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            color: white;
+            .about-worker {
+                background-color: rgb(42, 151, 42);
+                height: 100%;
+                font-weight: bold;
+                padding: 10px 20px;
+                p {
+                    font-size: 24px;
+                }
+                span {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    #portfolio {
+        .portfolio-card {
+            .portfolio-img {
+                img {
+                    width: 100%;
+                }
+            }
+            .portfolio-text {
+                padding: 20px;
+                h2 {
+                    font-weight: 500;
+                }
+                p {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+    #news {
+        padding: 120px 0;
+        background-color: rgb(250, 250, 250);
+        .news-text {
+            padding: 0 25px;
+            p {
+                font-weight: bold;
+                color: rgb(68, 68, 68);
+                font-size: 22px;
+            }
+            span {
+                font-size: 17px;
+                font-weight: 500;
+                color: rgb(138, 138, 138);
+            }
+        }
+    }
+    #contact-us {
+        padding-top: 120px;
+        label {
+            font-size: 17px;
+            color: rgb(95, 95, 95);
+            font-weight: 500;
+        }
+        button {
+            padding: 10px 40px;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            text-transform: uppercase;
+            border: 0;
+            border-radius: 30px;
+        }
+    }
+}
